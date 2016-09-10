@@ -37,6 +37,10 @@ defmodule WeebusPrice.Mixfile do
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
+     {:httpoison, "~> 0.9.0"},
+     {:hound, "~> 1.0"},
+     {:timex, "~> 3.0"},
+     {:csv, "~> 1.4.2"},
      {:cowboy, "~> 1.0"}]
   end
 

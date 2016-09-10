@@ -17,6 +17,48 @@ config :weebus_price, WeebusPrice.Endpoint,
   pubsub: [name: WeebusPrice.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
+config :weebus_price,
+  accounts: %{
+    ignored_categories: [
+      "Mama Liu",
+      "Air Travel",
+      "Travel",
+      "Hotel",
+      "Credit Card Payment",
+      "Financial",
+      "Interest Income",
+      "Paycheck",
+      "Mortgage & Rent",
+      "Auto Payment",
+      "Maid Service",
+      "Mobile Phone",
+      "Utilities",
+      "Internet",
+      "Transfer",
+      "Auto Insurance",
+    ],
+    people: %{
+      jenny: %{
+        monthly_limit: 2000,
+        accounts: [
+          "BankAmericard Visa Platinum Plus",
+          "Jenny's Private Account"
+        ]
+      },
+      chris: %{
+        monthly_limit: 2000,
+        accounts: [
+          "Private Account",
+          "Spend - everyday spending",
+          "Joint Account",
+          "Blue Cash"
+        ]
+      }
+    }
+  }
+
+config :hound, driver: "chrome_driver"
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
