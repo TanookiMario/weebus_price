@@ -12,8 +12,11 @@ defmodule Mix.Tasks.WeebusPrice.Calculate do
   end
 
   def calculate(raw_data) do
+    Mix.Task.run "app.start", []
+
     limit_by_day =
       WeebusPrice.TransactionParser.from_csv(raw_data)
+      |> WeebusPrice.TransactionSaver.save_month(DateMath.today)
       |> WeebusPrice.DailySpendByPerson.calculate
       |> WeebusPrice.MonthlyLimit.calculate
 
