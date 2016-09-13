@@ -36,6 +36,7 @@ config :weebus_price,
       "Internet",
       "Transfer",
       "Auto Insurance",
+      "Home Insurance"
     ],
     people: %{
       jenny: %{
