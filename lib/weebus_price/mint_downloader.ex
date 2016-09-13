@@ -18,7 +18,7 @@ defmodule WeebusPrice.MintDownloader do
   end
 
   def download_csv(pid, options) do
-    GenServer.call(pid, {:download, options})
+    GenServer.call(pid, {:download, options}, 20_000)
   end
 
   def stop(pid) do
@@ -91,6 +91,8 @@ defmodule WeebusPrice.MintDownloader do
     HTTPoison.get!(
       build_url(filters),
       %{},
+      timeout: 15_000,
+      recv_timeout: 15_000,
       hackney: [cookie: convert_cookies_to_hackney(cookies)]
     ).body
   end
