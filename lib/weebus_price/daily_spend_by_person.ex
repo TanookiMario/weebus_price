@@ -1,5 +1,6 @@
 defmodule WeebusPrice.DailySpendByPerson do
   alias WeebusPrice.Transaction
+  alias Decimal, as: D
 
   def calculate(transactions, options \\ Application.fetch_env!(:weebus_price, :accounts)) do
     transactions
@@ -46,11 +47,11 @@ defmodule WeebusPrice.DailySpendByPerson do
     total =
       for %Transaction{ amount: amount, type: type } <- transactions do
         case type do
-          "debit" -> amount
-          "credit" -> -amount
+          "debit" -> D.new(amount)
+          "credit" -> -D.new(amount)
         end
       end
-      |> Enum.sum
+      |> Enum.reduce(D.new(0), &D.add/2)
 
     %{ total: total, transactions: transactions}
   end
