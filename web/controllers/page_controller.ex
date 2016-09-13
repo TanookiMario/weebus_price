@@ -5,9 +5,9 @@ defmodule WeebusPrice.PageController do
   alias WeebusPrice.Transaction
 
   def index(conn, _params) do
-    day       = DateMath.today
-    first_day = DateMath.first_day_of_month(day)
-    last_day  = DateMath.last_day_of_month(day)
+    today     = DateMath.today
+    first_day = DateMath.first_day_of_month(today)
+    last_day  = DateMath.last_day_of_month(today)
 
     limit_by_day =
       Transaction.in_date_range(first_day, last_day)
@@ -20,6 +20,7 @@ defmodule WeebusPrice.PageController do
     end
 
     conn
+    |> assign(:today, today)
     |> assign(:todays_data, todays_data)
     |> render("index.html")
   end
