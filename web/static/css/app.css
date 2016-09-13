@@ -1,1 +1,29 @@
 /* This file is for your main application css. */
+
+h1.panel-title {
+    font-size: 36px;
+}
+h2.panel-title {
+    font-size: 30px;
+}
+h3.panel-title {
+    font-size: 24px;
+}
+h4.panel-title {
+    font-size: 18px
+}
+h5.panel-title {
+    font-size: 14px
+}
+h6.panel-title {
+    font-size: 10px;
+}
+
+.header {
+  margin-bottom: 40px;
+}
+
+.daily-amount {
+  display: inline-block;
+  margin-right: 0.1em;
+}
