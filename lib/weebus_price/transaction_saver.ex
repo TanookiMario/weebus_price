@@ -21,8 +21,8 @@ defmodule WeebusPrice.TransactionSaver do
     model
     |> Map.from_struct
     |> Map.drop([:__meta__, :__struct__, :id])
-    |> Map.update!(:date, fn(%Date{year: year, month: month, day: day}) ->
-      Ecto.Date.from_erl({year, month, day})
+    |> Map.update!(:date, fn(date = %Date{}) ->
+      date
     end)
     |> Map.update!(:inserted_at, fn(_) ->
       Ecto.DateTime.utc

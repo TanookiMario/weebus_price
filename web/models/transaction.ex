@@ -3,7 +3,7 @@ defmodule WeebusPrice.Transaction do
   import Ecto.Query, only: [from: 2]
 
   schema "transactions" do
-    field :date, Ecto.Date
+    field :date, Timex.Ecto.Date
     field :description, :string
     field :original_description, :string
     field :amount, :decimal

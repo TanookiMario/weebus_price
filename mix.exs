@@ -40,6 +40,7 @@ defmodule WeebusPrice.Mixfile do
      {:httpoison, "~> 0.9.0"},
      {:hound, "~> 1.0"},
      {:timex, "~> 3.0"},
+     {:timex_ecto, "~> 3.0"},
      {:csv, "~> 1.4.2"},
      {:cowboy, "~> 1.0"}]
   end
