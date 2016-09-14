@@ -12,7 +12,7 @@ defmodule WeebusPrice.MonthlyLimit do
     end
   end
 
-  def monthly_limit(spending_by_day, limit) do
+  def monthly_limit(spending_by_day, goal) do
     sorted_days =
       spending_by_day
       |> Map.keys
@@ -21,21 +21,23 @@ defmodule WeebusPrice.MonthlyLimit do
     days_in_month = length(sorted_days)
 
     initial = %{
+      goal:                 goal,
       days_left:            days_in_month,
       total_spent:          D.new(0),
-      total_left:           limit,
-      average_to_meet_goal: D.div(limit, D.new(days_in_month))
+      total_left:           goal,
+      average_to_meet_goal: D.div(goal, D.new(days_in_month))
     }
 
     Enum.reduce(sorted_days, %{ current: initial, days: %{}} , fn(day, %{ current: tally, days: days}) ->
       days_left    = length(sorted_days) - Enum.find_index(sorted_days, &(&1 == day))
       spent_so_far = D.add(D.new(tally[:total_spent]), D.new(spending_by_day[day][:total]))
-      total_left   = D.sub(limit, spent_so_far)
+      total_left   = D.sub(goal, spent_so_far)
 
       as_of_this_day = %{
+        goal:                 goal,
         days_left:            days_left,
         total_spent:          spent_so_far,
-        total_left:           D.sub(limit, spent_so_far),
+        total_left:           D.sub(goal, spent_so_far),
         average_to_meet_goal: case days_left do
                                 0 -> D.new(0)
                                 _ -> D.div(total_left, D.new(days_left))
