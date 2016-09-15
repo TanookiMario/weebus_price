@@ -20,6 +20,7 @@ config :weebus_price, WeebusPrice.Endpoint,
 config :weebus_price,
   accounts: %{
     ignored_categories: [
+      "Income",
       "Mama Liu",
       "Air Travel",
       "Travel",
