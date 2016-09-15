@@ -24,4 +24,8 @@ defmodule WeebusPrice.PageController do
     |> assign(:todays_data, todays_data)
     |> render("index.html")
   end
+
+  def birthday(conn, _params) do
+    render(conn, "birthday.html")
+  end
 end

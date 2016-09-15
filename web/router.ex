@@ -17,6 +17,7 @@ defmodule WeebusPrice.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/its-your-birfday", PageController, :birthday
   end
 
   # Other scopes may use custom stacks.

@@ -1,0 +1,40 @@
+<div class="header">
+</div>
+
+<div class="row title">
+  <div class="text-center">
+    <h1>Happy Birthday, Stinkles!</h1>
+  </div>
+</div>
+
+<div class="row gimme-space">
+  <div class="text-center">
+    <img height="350px" class="img-rounded" src="<%= static_path(@conn, "/images/cake.gif") %>">
+  </div>
+</div>
+
+<div class="row">
+  <div class="text-center">
+    <img height="300px" src="<%= static_path(@conn, "/images/weebus.png") %>">
+  </div>
+</div>
+
+<div class="row">
+  <div class="text-center">
+    <img class="kitty" src="<%= static_path(@conn, "/images/kbear.png") %>">
+    <img class="kitty" src="<%= static_path(@conn, "/images/sid.png") %>">
+  </div>
+</div>
+
+<div class="row">
+  <div class="text-center">
+    <img class="kitty" src="<%= static_path(@conn, "/images/evie.png") %>">
+    <img class="kitty" src="<%= static_path(@conn, "/images/elsa.png") %>">
+  </div>
+</div>
+
+<div class="row footer">
+  <div class="text-center">
+    <h1>From a Weebus, and Your Four Kitties!</h1>
+  </div>
+</div>

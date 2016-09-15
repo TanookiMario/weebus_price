@@ -19,7 +19,20 @@ h6.panel-title {
     font-size: 10px;
 }
 
+.title {
+  margin-bottom: 40px;
+}
+
 .header {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.gimme-space {
+  margin-bottom: 40px;
+}
+
+.footer {
   margin-top: 40px;
   margin-bottom: 40px;
 }
