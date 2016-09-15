@@ -41,3 +41,10 @@ h6.panel-title {
   display: inline-block;
   margin-right: 0.1em;
 }
+
+.easter-egg {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+
+}
