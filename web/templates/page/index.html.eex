@@ -14,8 +14,9 @@
       </div>
     </div>
 
-    <%= render("daily_goal.html", %{ spending: @todays_data[:jenny]}) %>
-    <%= render("total_spent.html", %{ spending: @todays_data[:jenny]}) %>
+    <%= render("daily_goal.html",       %{ spending: @todays_data[:jenny]}) %>
+    <%= render("average_spending.html", %{ spending: @todays_data[:jenny]}) %>
+    <%= render("total_spent.html",      %{ spending: @todays_data[:jenny]}) %>
   </div>
 
   <div class="col-lg-4">
@@ -26,8 +27,9 @@
       </div>
     </div>
 
-    <%= render("daily_goal.html",  %{ spending: @todays_data[:chris]}) %>
-    <%= render("total_spent.html", %{ spending: @todays_data[:chris]}) %>
+    <%= render("daily_goal.html",       %{ spending: @todays_data[:chris]}) %>
+    <%= render("average_spending.html", %{ spending: @todays_data[:chris]}) %>
+    <%= render("total_spent.html",      %{ spending: @todays_data[:chris]}) %>
 
   </div>
 

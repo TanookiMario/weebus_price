@@ -25,6 +25,7 @@ defmodule WeebusPrice.MonthlyLimit do
       days_left:            days_in_month,
       total_spent:          D.new(0),
       total_left:           goal,
+      average_spent_so_far: D.new(0),
       average_to_meet_goal: D.div(goal, D.new(days_in_month))
     }
 
@@ -38,6 +39,7 @@ defmodule WeebusPrice.MonthlyLimit do
         days_left:            days_left,
         total_spent:          spent_so_far,
         total_left:           D.sub(goal, spent_so_far),
+        average_spent_so_far: D.div(spent_so_far, D.new(length(sorted_days))),
         average_to_meet_goal: case days_left do
                                 0 -> D.new(0)
                                 _ -> D.div(total_left, D.new(days_left))
