@@ -2,8 +2,9 @@ defmodule WeebusPrice.PageView do
   use WeebusPrice.Web, :view
   alias Decimal, as: D
 
-  def daily_amount(day_data, person) do
-    D.round(day_data[person][:average_to_meet_goal], 2)
+  def currency(amount) do
+    D.round(amount, 2)
+    |> D.to_string
   end
 
   def long_date(date = %Date{}) do

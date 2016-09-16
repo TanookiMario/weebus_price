@@ -1,0 +1,8 @@
+<div class="panel panel-default info-widget">
+  <div class="panel-heading text-center">
+    <h3 class="panel-title">Total Spent</h3>
+  </div>
+  <div class="panel-body text-center">
+    <h3>$<%= currency(@spending[:total_spent]) %></h3>
+  </div>
+</div>

@@ -5,28 +5,31 @@
 </div>
 
 <div class="row">
-  <div class="col-lg-3"></div>
-  <div class="col-lg-3">
+  <div class="col-lg-2"></div>
+  <div class="col-lg-4">
+
     <div class="panel panel-default">
       <div class="panel-heading text-center">
-        <h2 class="panel-title">Jenny</h2>
-      </div>
-      <div class="panel-body text-center">
-        <h3 class="daily-amount">$<%= daily_amount(@todays_data, :jenny) %></h3>/day
+        <h1 class="panel-title">Jenny</h1>
       </div>
     </div>
+
+    <%= render("daily_goal.html", %{ spending: @todays_data[:jenny]}) %>
+    <%= render("total_spent.html", %{ spending: @todays_data[:jenny]}) %>
   </div>
 
-  <div class="col-lg-3">
+  <div class="col-lg-4">
+
     <div class="panel panel-default">
       <div class="panel-heading text-center">
-        <h2 class="panel-title">Chris</h2>
-      </div>
-      <div class="panel-body text-center">
-        <h3 class="daily-amount">$<%= daily_amount(@todays_data, :chris) %></h3>/day
+        <h1 class="panel-title">Chris</h1>
       </div>
     </div>
+
+    <%= render("daily_goal.html",  %{ spending: @todays_data[:chris]}) %>
+    <%= render("total_spent.html", %{ spending: @todays_data[:chris]}) %>
+
   </div>
 
-  <div class="col-lg-3"></div>
+  <div class="col-lg-2"></div>
 </div

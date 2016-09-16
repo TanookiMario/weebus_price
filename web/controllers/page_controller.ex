@@ -22,6 +22,7 @@ defmodule WeebusPrice.PageController do
     conn
     |> assign(:today, today)
     |> assign(:todays_data, todays_data)
+    |> assign(:all_data, limit_by_day)
     |> render("index.html")
   end
 
