@@ -8,29 +8,32 @@
   <div class="col-lg-2"></div>
   <div class="col-lg-4">
 
-    <div class="panel panel-default">
+    <div class="panel panel-default panel-person">
       <div class="panel-heading text-center">
         <h1 class="panel-title">Jenny</h1>
       </div>
-    </div>
 
-    <%= render("daily_goal.html",       %{ spending: @todays_data[:jenny]}) %>
-    <%= render("average_spending.html", %{ spending: @todays_data[:jenny]}) %>
-    <%= render("total_spent.html",      %{ spending: @todays_data[:jenny]}) %>
+      <div class="panel-body text-center">
+        <%= render("daily_goal.html",       %{ spending: @todays_data[:jenny]}) %>
+        <%= render("average_spending.html", %{ spending: @todays_data[:jenny]}) %>
+        <%= render("total_spent.html",      %{ spending: @todays_data[:jenny]}) %>
+      </div>
+    </div>
   </div>
 
   <div class="col-lg-4">
 
-    <div class="panel panel-default">
+    <div class="panel panel-default panel-person">
       <div class="panel-heading text-center">
         <h1 class="panel-title">Chris</h1>
       </div>
+
+      <div class="panel-body text-center">
+        <%= render("daily_goal.html",       %{ spending: @todays_data[:chris]}) %>
+        <%= render("average_spending.html", %{ spending: @todays_data[:chris]}) %>
+        <%= render("total_spent.html",      %{ spending: @todays_data[:chris]}) %>
+      </div>
     </div>
-
-    <%= render("daily_goal.html",       %{ spending: @todays_data[:chris]}) %>
-    <%= render("average_spending.html", %{ spending: @todays_data[:chris]}) %>
-    <%= render("total_spent.html",      %{ spending: @todays_data[:chris]}) %>
-
   </div>
 
   <div class="col-lg-2"></div>

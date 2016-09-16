@@ -23,6 +23,10 @@ h6.panel-title {
   margin-bottom: 40px;
 }
 
+.panel-person {
+  background-color: rgb(38, 38, 38);
+}
+
 .header {
   margin-top: 40px;
   margin-bottom: 40px;
@@ -43,8 +47,8 @@ h6.panel-title {
 }
 
 .info-widget {
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .easter-egg {
