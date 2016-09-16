@@ -3,8 +3,7 @@ defmodule WeebusPrice.PageView do
   alias Decimal, as: D
 
   def currency(amount) do
-    D.round(amount, 2)
-    |> D.to_string
+    D.round(amount, 2) |> D.to_string(:normal)
   end
 
   def long_date(date = %Date{}) do
