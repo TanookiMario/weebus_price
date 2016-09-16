@@ -16,7 +16,7 @@
       <div class="panel-body text-center">
         <%= render("daily_goal.html",       %{ spending: @todays_data[:jenny]}) %>
         <%= render("average_spending.html", %{ spending: @todays_data[:jenny]}) %>
-        <%= render("total_spent.html",      %{ spending: @todays_data[:jenny]}) %>
+        <%= render("spending_left.html",    %{ spending: @todays_data[:jenny]}) %>
       </div>
     </div>
   </div>
@@ -31,7 +31,7 @@
       <div class="panel-body text-center">
         <%= render("daily_goal.html",       %{ spending: @todays_data[:chris]}) %>
         <%= render("average_spending.html", %{ spending: @todays_data[:chris]}) %>
-        <%= render("total_spent.html",      %{ spending: @todays_data[:chris]}) %>
+        <%= render("spending_left.html",    %{ spending: @todays_data[:chris]}) %>
       </div>
     </div>
   </div>
