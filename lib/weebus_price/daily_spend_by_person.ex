@@ -45,10 +45,10 @@ defmodule WeebusPrice.DailySpendByPerson do
 
   def to_daily_summary(transactions) do
     total =
-      for %Transaction{ amount: amount, type: type } <- transactions do
+    for %Transaction{ amount: amount, type: type } <- transactions do
         case type do
           "debit" -> D.new(amount)
-          "credit" -> D.new(-amount)
+          "credit" -> D.minus(D.new(amount))
         end
       end
       |> Enum.reduce(D.new(0), &D.add/2)
