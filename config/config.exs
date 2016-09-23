@@ -39,6 +39,10 @@ config :weebus_price,
       "Auto Insurance",
       "Home Insurance"
     ],
+    ignored_labels: [
+      "Reimbursable",
+      "Ignored"
+    ],
     people: %{
       jenny: %{
         monthly_limit: 2000,
