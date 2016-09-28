@@ -37,7 +37,9 @@ config :weebus_price,
       "Internet",
       "Transfer",
       "Auto Insurance",
-      "Home Insurance"
+      "Home Insurance",
+      "Service & Parts",
+      "Auto Registration"
     ],
     ignored_labels: [
       "Reimbursable",
