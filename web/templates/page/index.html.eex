@@ -10,28 +10,13 @@
 
     <div class="panel panel-default panel-person">
       <div class="panel-heading text-center">
-        <h1 class="panel-title">Jenny</h1>
+        <h1 class="panel-title">Mario</h1>
       </div>
 
       <div class="panel-body text-center">
-        <%= render("daily_goal.html",       %{ spending: @todays_data[:jenny]}) %>
-        <%= render("average_spending.html", %{ spending: @todays_data[:jenny]}) %>
-        <%= render("spending_left.html",    %{ spending: @todays_data[:jenny]}) %>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-lg-4">
-
-    <div class="panel panel-default panel-person">
-      <div class="panel-heading text-center">
-        <h1 class="panel-title">Chris</h1>
-      </div>
-
-      <div class="panel-body text-center">
-        <%= render("daily_goal.html",       %{ spending: @todays_data[:chris]}) %>
-        <%= render("average_spending.html", %{ spending: @todays_data[:chris]}) %>
-        <%= render("spending_left.html",    %{ spending: @todays_data[:chris]}) %>
+        <%= render("daily_goal.html",       %{ spending: @todays_data[:mario]}) %>
+        <%= render("average_spending.html", %{ spending: @todays_data[:mario]}) %>
+        <%= render("spending_left.html",    %{ spending: @todays_data[:mario]}) %>
       </div>
     </div>
   </div>

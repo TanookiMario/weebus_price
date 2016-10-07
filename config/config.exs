@@ -19,47 +19,20 @@ config :weebus_price, WeebusPrice.Endpoint,
 
 config :weebus_price,
   accounts: %{
-    ignored_categories: [
-      "Income",
-      "Mama Liu",
-      "Air Travel",
-      "Travel",
-      "Hotel",
-      "Credit Card Payment",
-      "Financial",
-      "Interest Income",
-      "Paycheck",
-      "Mortgage & Rent",
-      "Auto Payment",
-      "Maid Service",
-      "Mobile Phone",
-      "Utilities",
-      "Internet",
-      "Transfer",
-      "Auto Insurance",
-      "Home Insurance",
-      "Service & Parts",
-      "Auto Registration"
-    ],
     ignored_labels: [
       "Reimbursable",
       "Ignored"
     ],
+    categories: [
+      "Entertainment"
+    ],
     people: %{
-      jenny: %{
-        monthly_limit: 2000,
+      mario: %{
+        monthly_limit: 1000,
         accounts: [
-          "BankAmericard Visa Platinum Plus",
-          "Jenny's Private Account"
-        ]
-      },
-      chris: %{
-        monthly_limit: 2000,
-        accounts: [
-          "Private Account",
+          "Visa Signature",
           "Spend - everyday spending",
-          "Joint Account",
-          "Blue Cash"
+          "PayPal Account"
         ]
       }
     }

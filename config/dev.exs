@@ -36,8 +36,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :weebus_price, WeebusPrice.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "konoha",
+  password: "RamJam33",
   database: "weebus_price_dev",
   hostname: "localhost",
   pool_size: 10

@@ -4,15 +4,15 @@ defmodule WeebusPrice.DailySpendByPerson do
 
   def calculate(transactions, options \\ Application.fetch_env!(:weebus_price, :accounts)) do
     transactions
-    |> filter(options[:ignored_categories], options[:ignored_labels])
+    |> filter(options[:categories], options[:ignored_labels])
     |> group_by_people(options[:people])
     |> group_by_day
   end
 
-  def filter(transactions, ignored_categories \\ [], ignored_labels \\ []) do
+  def filter(transactions, categories \\ [], ignored_labels \\ []) do
     transactions
-    |> Enum.reject(fn(%Transaction{ category: category }) ->
-      Enum.member?(ignored_categories, category)
+    |> Enum.filter(fn(%Transaction{ category: category }) ->
+      Enum.member?(categories, category)
     end)
     |> Enum.reject(fn(%Transaction{ labels: labels }) ->
       Enum.member?(ignored_labels, labels)

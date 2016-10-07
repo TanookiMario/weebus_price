@@ -13,8 +13,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :weebus_price, WeebusPrice.Endpoint,
   http: [port: {:system, "PORT"}],
-  url: [scheme: "https", host: System.get_env("HEROKU_HOST"), port: 443],
-  force_ssl: [rewrite_on: [:x_forwarded_proto]],
+  url: [scheme: "http", host: System.get_env("HEROKU_HOST"), port: 80],
   cache_static_manifest: "priv/static/manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE")
 
